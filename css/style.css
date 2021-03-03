@@ -3,6 +3,7 @@
 /* белый #FFFFFF
 /* черный #000000
 /* акцент #2196F3
+/* цвет фона секции наша команда #F5F4FA
 /* цвет текста адресса футера rgba(f, f, f, 0.6)*/
 
 :root {
@@ -14,7 +15,9 @@
   --primary-white-color: #ffffff;
   --logo-black-color: #000000;
   --adress-white-color: rgba(f, f, f, 0.6);
+  --background-team-color: #f5f4fa;
   --background-dark-color: #2f303a;
+  --elements-gap: 30px;
 }
 
 body {
@@ -50,13 +53,12 @@ h6,
 p {
   margin: 0;
 }
-
-/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 img {
   display: block;
   max-width: 100%;
   height: auto;
-}*/
+}
+
 .container {
   margin-left: auto;
   margin-right: auto;
@@ -138,7 +140,7 @@ img {
   margin-right: 50px;
 }
 
-/* Hero */
+/*================================== HERO ==============================*/
 .hero {
   background-color: var(--background-dark-color);
 }
@@ -171,7 +173,7 @@ img {
   color: var(--primary-white-color);
   background-color: var(--accent-color);
 
-  display: inline-block;
+  display: block;
   padding: 10px 32px;
   margin-top: 30px;
   margin-left: auto;
@@ -186,7 +188,7 @@ img {
 .btn:focus {
   background-color: #188ce8;
 }
-
+/*========================= ADVANTAGES ==========================*/
 /*Section title*/
 
 .section-title {
@@ -212,6 +214,23 @@ img {
 }
 
 /* Advantages*/
+.advantages {
+  padding: 94px 0;
+}
+.advantages-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: calc(-1 * var(--elements-gap));
+
+  outline: 2px solid rgb(201, 14, 14);
+}
+.advantages-item {
+  margin-right: var(--elements-gap);
+  flex-basis: calc(100% / 4 - var(--elements-gap));
+
+  outline: 2px solid rgb(4, 37, 99);
+}
+
 .advantages-title {
   font-weight: 700;
   font-size: 14px;
@@ -219,6 +238,9 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--title-text-color);
+}
+.advantages-descript {
+  margin-top: 10px;
 }
 
 /*Наследуется от body
@@ -228,7 +250,46 @@ img {
   letter-spacing: 0.03em;
 }*/
 
-/*Team*/
+/*=============================== ACTIVITY ===============================*/
+.activity-list {
+  display: flex;
+  margin-right: calc(-1 * var(--elements-gap));
+  margin-top: 50px;
+
+  outline: 2px solid rgb(4, 37, 99);
+}
+.activity-item {
+  margin-right: var(--elements-gap);
+  flex-basis: calc(100% / 3 - var(--elements-gap));
+
+  outline: 2px solid rgb(201, 14, 14);
+}
+/*=============================== TEAM ====================================*/
+.team {
+  background-color: var(--background-team-color);
+}
+.team-container {
+  padding: 94px 0;
+}
+.team-list {
+  display: flex;
+  margin-top: 50px;
+  margin-right: calc(-1 * var(--elements-gap));
+
+  /*outline: 2px solid rgb(4, 37, 99);*/
+}
+.team-member {
+  padding-bottom: var(--elements-gap);
+  margin-right: var(--elements-gap);
+  flex-basis: calc(100% / 4 - var(--elements-gap));
+
+  background-color: var(--primary-white-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+
+  outline: 2px solid rgb(230, 24, 92);
+}
 .team-member-name {
   font-weight: 500;
   font-size: 16px;
@@ -237,16 +298,34 @@ img {
   letter-spacing: 0.03em;
 
   color: var(--title-text-color);
+
+  margin-top: var(--elements-gap);
 }
 .team-member-post {
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
   letter-spacing: 0.03em;
+
+  margin-top: 10px;
 }
 
+.team-member-img {
+  outline: 2px solid rgb(230, 24, 92);
+}
+
+/*====================================== FOOTER ======================*/
 .footer {
   background-color: var(--background-dark-color);
+}
+.footer-container {
+  padding: 60px 0;
+}
+.address {
+  margin-top: 20px;
+}
+.address-list-item:not(:first-child) {
+  margin-top: 9px;
 }
 .address-street {
   color: var(--primary-white-color);
