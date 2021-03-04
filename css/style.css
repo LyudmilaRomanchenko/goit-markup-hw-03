@@ -144,6 +144,7 @@ img {
 }
 .our-contacts {
   display: flex;
+  align-items: center;
 
   /*outline: 2px solid rgb(4, 83, 107);*/
 }
@@ -256,7 +257,7 @@ img {
 
 /*=============================== ACTIVITY ===============================*/
 .activity {
-  padding: 0 15px;
+  padding-bottom: 94px;
 }
 
 .activity-list {
